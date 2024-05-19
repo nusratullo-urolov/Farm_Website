@@ -12,13 +12,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="intense web design multipurpose template">
     <meta name="date" content="Dec 26">
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="'{% static 'images/favicon.ico' %}'" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css"
         href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static '{% static 'css/bootstrap.css' %}' %}">
+    <link rel="stylesheet" href="{% static '{% static 'css/fonts.css' %}' %}">
+    <link rel="stylesheet" href="{% static '{% static 'css/style.css' %}' %}">
 </head>
 
 <body>
@@ -70,7 +70,7 @@
                                                     type="password" name="pass" data-constraints="@Required">
                                             </div>
                                             <div class="offset-top-20">
-                                                <a href="./asosiy.html">
+                                                <a href="./{% url 'home' %}">
                                                     <button class="btn button-primary d-block d-xl-inline-block"
                                                     type="submit">Sign in</button>
                                                 </a>
@@ -132,7 +132,7 @@
         <!-- Global Mailform Output-->
         <div class="snackbars" id="form-output-global"></div>
         <!-- Java script-->
-        <script src="{% static 'js/core.min.js' %}"></script>
-        <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static '{% static 'js/core.min.js' %}' %}"></script>
+        <script src="{% static '{% static 'js/script.js' %}' %}"></script>
       </body>
     </html>

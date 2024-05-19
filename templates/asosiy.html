@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html class="wide wow-animation scrollTo" lang="en">
   <head>
     <!-- Site Title-->
@@ -9,12 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="intense web design multipurpose template">
     <meta name="date" content="Dec 26">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
     <div class="preloader"> 
@@ -37,9 +38,9 @@
               
               <div class="rd-navbar-menu-wrap clearfix">
                 <!--Navbar Brand-->
-                <div class="rd-navbar-brand"><a class="d-inline-block" href="asosiy.html">
+                <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                     <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
-                      <div class="unit-left"><img width='170' height='172' src='images/image_2024-04-25_01-14-29.png' alt=''/>
+                      <div class="unit-left"><img width='170' height='172' src='{% static 'images/image_2024-04-25_01-14-29.png' %}' alt=''/>
                       </div>
                       <div class="unit-body">
                         <div class="rd-navbar-brand-title">BoburFarm</div>
@@ -50,12 +51,12 @@
                   <div class="rd-navbar-mobile-scroll">
                     <div class="rd-navbar-mobile-header-wrap">
                       <!--Navbar Brand Mobile-->
-                      <div class="rd-navbar-mobile-brand"><a href="asosiy.html"><img width='136' height='138' src='images/logo-170x172.png' alt=''/></a></div>
+                      <div class="rd-navbar-mobile-brand"><a href="{% url 'home' %}"><img width='136' height='138' src='{% static 'images/logo-170x172.png' %}' alt=''/></a></div>
                     </div>
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                       
-                      <li><a href="asosiy.html">Главное</a>
+                      <li><a href="{% url 'home' %}">Главное</a>
                       </li>
                       <li><a href="sotrudnik.html">Услуги</a>
                       </li>
@@ -79,12 +80,12 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/kombayn.png" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/kombayn.png' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
                             <h6>
-                                <a href="kombayn.html">
+                                <a href="{% url 'combine' %}">
                                     Комбайны
                                 </a>
                             </h6>
@@ -95,12 +96,12 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/traktor.jpg" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/traktor.jpg' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
                             <h6>
-                                <a href="traktor.html">
+                                <a href="{% url 'tractor' %}">
                                     Тракторы
                                 </a>
                             </h6>
@@ -111,12 +112,12 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/минеральное удобрение.webp" width="370" style="height: 205px;">
+                        <img class="img-responsive" src="{% static 'images/минеральное удобрение.webp' %}" width="370" style="height: 205px;">
                     </a>
                     <div class="post-news-body">
                         <center>
                             <h6>
-                                <a href="ogit.html">
+                                <a href="{% url 'mineral_endorsement' %}">
                                     Минеральные Удобрения
                                 </a>
                             </h6>
@@ -127,12 +128,12 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/sotrudnikil.jpg" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/sotrudnikil.jpg' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
                             <h6>
-                                <a href="ishchi.html">
+                                <a href="{% url 'workers' %}">
                                     Роботники
                                 </a>
                             </h6>
@@ -143,12 +144,12 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/drugie.png" width="370" style="height: 250px;">
+                        <img class="img-responsive" src="{% static 'images/drugie.png' %}" width="370" style="height: 250px;">
                     </a>
                     <div class="post-news-body">
                         <center>
                             <h6>
-                                <a href="uskuna.html">
+                                <a href="{% url 'equipments' %}">
                                     Другие обородувания
                                 </a>
                             </h6>
@@ -159,7 +160,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/yer maydoni.png" width="370" style="height: 250px;">
+                        <img class="img-responsive" src="{% static 'images/yer maydoni.png' %}" width="370" style="height: 250px;">
                     </a>
                     <div class="post-news-body">
                         <center>
@@ -190,7 +191,7 @@
         <div class="container section-xs block-after-divider">
           <div class="row row-50 justify-content-xl-between justify-content-sm-center">
             <div class="col-lg-5 col-xl-5">
-              <!--Footer brand--><a class="d-inline-block" href="asosiy.html"><img width='170' height='172' src='images/logo.jpg' alt=''/>
+              <!--Footer brand--><a class="d-inline-block" href="{% url 'home' %}"><img width='170' height='172' src='{% static 'images/logo.jpg' %}' alt=''/>
                 <div>
                   <h6 class="barnd-name fw-bold offset-top-25">BoburFarm</h6>
                 </div>
@@ -245,7 +246,7 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

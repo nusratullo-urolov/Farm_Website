@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html class="wide wow-animation scrollTo" lang="en">
 
 <head>
@@ -11,13 +12,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="intense web design multipurpose template">
     <meta name="date" content="Dec 26">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -48,9 +49,9 @@
 
                         <div class="rd-navbar-menu-wrap clearfix">
                             <!--Navbar Brand-->
-                            <div class="rd-navbar-brand"><a class="d-inline-block" href="asosiy.html">
+                            <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                                     <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
-                                        <div class="unit-left"><img width='170' height='172' src='images/logo.jpg'
+                                        <div class="unit-left"><img width='170' height='172' src='{% static 'images/logo.jpg' %}'
                                                 alt='' />
                                         </div>
                                         <div class="unit-body">
@@ -63,13 +64,13 @@
                                 <div class="rd-navbar-mobile-scroll">
                                     <div class="rd-navbar-mobile-header-wrap">
                                         <!--Navbar Brand Mobile-->
-                                        <div class="rd-navbar-mobile-brand"><a href="asosiy.html"><img width='136'
-                                                    height='138' src='images/logo-170x172.png' alt='' /></a></div>
+                                        <div class="rd-navbar-mobile-brand"><a href="{% url 'home' %}"><img width='136'
+                                                    height='138' src='{% static 'images/logo-170x172.png' %}' alt='' /></a></div>
                                     </div>
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
 
-                                        <li><a href="asosiy.html">Главное</a>
+                                        <li><a href="{% url 'home' %}">Главное</a>
                                         </li>
                                         <li><a href="sotrudnik.html">Сотрудники</a>
                                         </li>
@@ -100,60 +101,20 @@
                                 <th>Состаяния</th>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td></td>
                                 <td>Общий</td>
                                 <td>50+-шт</td>
                                 <td>98%</td>
                             </tr>
+                            {% for equipment in equipments %}
                             <tr>
-                                <td>2</td>
-                                <td>Чизиль</td>
-                                <td>7шт</td>
-                                <td>5шт<i class="fa fa-check"></i></td>
+                                <td>{{ equipment.id }}</td>
+                                <td>{{ equipment.name }}</td>
+                                <td>{{ equipment.quantity }}шт</td>
+                                <td>{{ equipment.condition }}шт<i class="fa fa-check"></i></td>
 
                             </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Пилик</td>
-                                <td>5шт</td>
-                                <td>4шт<i class="fa fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Пирсеп</td>
-                                <td>3шт</td>
-                                <td>3шт<i class="fa fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Лазерние уровние</td>
-                                <td>2шт</td>
-                                <td>2шт<i class="fa fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Гига пирсепт</td>
-                                <td>5шт</td>
-                                <td>5шт<i class="fa fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Каропкабоз</td>
-                                <td>10шт</td>
-                                <td>9шт<i class="fa fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Селка</td>
-                                <td>3шт</td>
-                                <td><i class="fa fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>другие</td>
-                                <td>15шт</td>
-                                <td>15<i class="fa fa-check"></i></td>
-                            </tr>
+                            {% endfor %}
                         </table>
                     </div>
                 </div>
@@ -165,8 +126,8 @@
             <div class="container section-xs block-after-divider">
                 <div class="row row-50 justify-content-xl-between justify-content-sm-center">
                     <div class="col-lg-5 col-xl-5">
-                        <!--Footer brand--><a class="d-inline-block" href="asosiy.html"><img width='170' height='172'
-                                src='images/logo.jpg' alt='' />
+                        <!--Footer brand--><a class="d-inline-block" href="{% url 'home' %}"><img width='170' height='172'
+                                src='{% static 'images/logo.jpg' %}' alt='' />
                                 <div>
                                     <h6 class="barnd-name fw-bold offset-top-25">BoburFarm</h6>
                                   </div>
@@ -221,7 +182,7 @@
                       <!-- Global Mailform Output-->
                       <div class="snackbars" id="form-output-global"></div>
                       <!-- Java script-->
-                      <script src="js/core.min.js"></script>
-                      <script src="js/script.js"></script>
+                      <script src="{% static 'js/core.min.js' %}"></script>
+                      <script src="{% static 'js/script.js' %}"></script>
                     </body>
                   </html>

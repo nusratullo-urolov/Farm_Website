@@ -11,13 +11,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="keywords" content="intense web design multipurpose template">
   <meta name="date" content="Dec 26">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
   <!-- Stylesheets-->
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static '{% static 'css/bootstrap.css' %}' %}">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
 
             <div class="rd-navbar-menu-wrap clearfix">
               <!--Navbar Brand-->
-              <div class="rd-navbar-brand"><a class="d-inline-block" href="asosiy.html">
+              <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                   <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
                     <div class="unit-left"><img width='170' height='172' src='images/image_2024-04-25_01-14-29.png'
                         alt='' />
@@ -62,13 +62,13 @@
                 <div class="rd-navbar-mobile-scroll">
                   <div class="rd-navbar-mobile-header-wrap">
                     <!--Navbar Brand Mobile-->
-                    <div class="rd-navbar-mobile-brand"><a href="asosiy.html"><img width='136' height='138'
-                          src='images/logo-170x172.png' alt='' /></a></div>
+                    <div class="rd-navbar-mobile-brand"><a href="{% url 'home' %}"><img width='136' height='138'
+                          src='{% static 'images/logo-170x172.png' %}' alt='' /></a></div>
                   </div>
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
 
-                    <li><a href="asosiy.html">Главное</a>
+                    <li><a href="{% url 'home' %}">Главное</a>
                     </li>
                     <li><a href="sotrudnik.html">Сотрудники</a>
                     </li>
@@ -227,8 +227,8 @@
     <div class="container section-xs block-after-divider">
       <div class="row row-50 justify-content-xl-between justify-content-sm-center">
         <div class="col-lg-5 col-xl-5">
-          <!--Footer brand--><a class="d-inline-block" href="asosiy.html"><img width='170' height='172'
-              src='images/logo.jpg' alt='' />
+          <!--Footer brand--><a class="d-inline-block" href="{% url 'home' %}"><img width='170' height='172'
+              src='{% static 'images/logo.jpg' %}' alt='' />
             <div>
               <h6 class="barnd-name fw-bold offset-top-25">BoburFarm</h6>
             </div>
@@ -290,8 +290,8 @@
   <div class="snackbars" id="form-output-global"></div>
   <!-- Java script-->
   
-  <script src="js/core.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="{% static 'js/core.min.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
 
 </body>
 

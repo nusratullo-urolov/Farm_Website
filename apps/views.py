@@ -3,7 +3,7 @@ from django.core.paginator import Paginator, PageNotAnInteger
 from django.shortcuts import render, redirect
 
 from apps.forms import RegisterForm, LoginForm
-from apps.models import User
+from apps.models import User, Combine, Tractor, Workers, OtherEquipments, MineralEndorsements
 
 
 # Create your views here.
@@ -31,3 +31,33 @@ def login_1(request):
                 login(request, users)
                 return redirect('home')
     return render(request, 'auth/auth.html')
+
+
+def combine(request):
+    combines = Combine.objects.all()
+    return render(request, 'kombayn.html', context={'combines': combines})
+
+
+def tractor(request):
+    tractors = Tractor.objects.all()
+    return render(request, 'traktor.html', context={'tractor': tractors})
+
+
+def mineral_endorsement(request):
+    minerals = MineralEndorsements.objects.all()
+    return render(request, 'ogit.html', context={'minerals': minerals})
+
+
+def worker(request):
+    workers = Workers.objects.all()
+    return render(request, 'ishchi.html', context={'workers': workers})
+
+
+def other_equipment(request):
+    equipments = OtherEquipments.objects.all()
+
+    return render(request, 'uskuna.html', context={'equipments': equipments})
+
+
+def home(request):
+    return render(request, 'asosiy.html')

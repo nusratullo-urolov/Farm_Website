@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html class="wide wow-animation scrollTo" lang="en">
   <head>
     <!-- Site Title-->
@@ -9,12 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="intense web design multipurpose template">
     <meta name="date" content="Dec 26">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="'{% static 'images/favicon.ico' %}'" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
     <div class="preloader"> 
@@ -37,9 +38,9 @@
               
               <div class="rd-navbar-menu-wrap clearfix">
                 <!--Navbar Brand-->
-                <div class="rd-navbar-brand"><a class="d-inline-block" href="asosiy.html">
+                <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                     <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
-                      <div class="unit-left"><img width='170' height='172' src='images/logo.jpg' alt=''/>
+                      <div class="unit-left"><img width='170' height='172' src='{% static 'images/logo.jpg' %}' alt=''/>
                       </div>
                       <div class="unit-body">
                         <div class="rd-navbar-brand-title">BoburFarm</div>
@@ -50,12 +51,12 @@
                   <div class="rd-navbar-mobile-scroll">
                     <div class="rd-navbar-mobile-header-wrap">
                       <!--Navbar Brand Mobile-->
-                      <div class="rd-navbar-mobile-brand"><a href="asosiy.html"><img width='136' height='138' src='images/logo-170x172.png' alt=''/></a></div>
+                      <div class="rd-navbar-mobile-brand"><a href="{% url 'home' %}"><img width='136' height='138' src='{% static 'images/logo-170x172.png' %}' alt=''/></a></div>
                     </div>
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                       
-                      <li><a href="asosiy.html">Главное</a>
+                      <li><a href="{% url 'home' %}">Главное</a>
                       </li>
                       <li><a href="sotrudnik.html">Сотрудники</a>
                       </li>
@@ -77,107 +78,26 @@
           <h2 class="fw-bold">Комбайны</h2>
           <hr class="divider bg-madison">
           <div class="row row-30 offset-top-60 text-md-start justify-content-sm-center">
+              {% for combine in combines %}
             <div class="col-md-6 col-lg-4 traktor">
-              <article class="post-news post-news-wide"><a href="https://yandex.uz/video/preview/12081852545497469529"><img class="img-responsive" src="images/WORLD 4YZ combine xlopok.webp" width="700" height="455" alt=""></a>
+              <article class="post-news post-news-wide"><a href="https://yandex.uz/video/preview/12081852545497469529"><img class="img-responsive" src="{{ combine.image.url }}" width="700" height="455" alt=""></a>
                 <div class="post-news-body">
-                  <h6><a href="news-post-page.html">WORLD 4YZ combine </a></h6>
+                  <h6><a href="news-post-page.html">{{ combine.name }}</a></h6>
                   <div class="offset-top-20  traktor1">
-                    <p>Принимает 110HP двигатель с высокой мощностью и низким расходом топлива.
-                      Ширина резки 2,36 м для различных областей полей.
-                      Всемирная специальная гидравлическая коробка передач 85 с лучшим качеством.
-                      Используйте 45cc HST для более плавной работы.
-                      Больший молотильный цилиндр обеспечивает меньшую потерю зерна и намного чище.
-                      Более Прочная резиновая гусеница 550*90*56 с высокими зубьями для более эффективной работы в глубоком Грязевом поле</p>
+                    <p>{{ combine.description }}</p>
                   </div>
                   <!-------------------------------Рабочий------------------------------------>
                   <div class="post-news-meta offset-top-20">
                     <span class="fa fa-check"></span>
                     <span class="align-middle inset-left-10 fst-italic text-black">
-                      Рабочий
+                      {{ combine.condition }}
                     </span>
                   </div>
                   <!-------------------------------Рабочий------------------------------------>
                 </div>
               </article>
             </div>
-            <div class="col-md-6 col-lg-4 traktor">
-              <article class="post-news post-news-wide"><a href="https://yandex.uz/video/preview/16087057269843418704"><img class="img-responsive" src="images/Енисей.webp" width="700" height="455" alt=""></a>
-                <div class="post-news-body">
-                  <h6><a href="news-post-page.html">Енисей</a></h6>
-                  <div class="offset-top-20  traktor1">
-                    <p>«Енисей-1200» — советский зерноуборочный комбайн, выпускавшийся заводом ОАО «Красноярский завод комбайнов».
-                      Имеет зерновой бункер с вибропобудителем, электронный тахоспидометр, камнеуловитель, подборщик барабанного типа, систему звуковой и световой сигнализации.
-                      Оснащён молотильным устройством с двумя бильными барабанами и механизмом облегчённой регулировки их частоты вращения.
-                      При оборудовании специальными приспособлениями может использоваться для уборки семенников трав, подсолнечника, зернобобовых и крупяных культур.
-                      Серийно комбайн начал выпускаться с 1985 года.
-                      Комплектуется дизельным двигателем СМД-22 и Д-440</p>
-                  </div>
-                  <!-------------------------------Нерабочий------------------------------------>
-                  <div class="post-news-meta offset-top-20">
-                    <span class="fa fa-times"></span>
-                    <span class="align-middle inset-left-10 fst-italic text-black">
-                      Нерабочий
-                    </span>
-                  </div>
-                  <!-------------------------------Нерабочий------------------------------------>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4 traktor">
-              <article class="post-news post-news-wide"><a href="https://www.youtube.com/watch?v=47jcRTIgnno"><img class="img-responsive" src="images/Комбайн kubota mini.webp" width="700" height="455" alt=""></a>
-                <div class="post-news-body">
-                  <h6><a href="news-post-page.html">Комбайн kubota mini</a></h6>
-                  <div class="offset-top-20  traktor1">
-                    <p>Комбайн, сконфигурированный так, чтобы эффективно грабить с помощью сгребного шнека. Часть кончика уха стеблей разделительной стороны, собранная с помощью режущего лезвия и для предотвращения повреждения разделителя. Зерноуборочный комбайн в соответствии с настоящим изобретением снабжен разделителем, катушком для сгребания, режущим лезвием, шнеком для сгребания, платформой и конвейером, где комбайн отличается тем, что шнек для сгребания состоит из цилиндрического барабана, Спиральных лопастей, выступающих от внешней окружной поверхности барабана и способных к боковому движению для ориентации стеблей зерна на конвейер,
-                       и множество стержневых гребневых пальцев, способных радиально выдвигаться и оттягиваться от внешней периферийной поверхности барабана для направления зерновых стеблей к конвейеру.</p>
-                  </div>
-                  <!-------------------------------Рабочий------------------------------------>
-                  <div class="post-news-meta offset-top-20">
-                    <span class="fa fa-check"></span>
-                    <span class="align-middle inset-left-10 fst-italic text-black">
-                      Рабочий
-                    </span>
-                  </div>
-                  <!-------------------------------Рабочий------------------------------------>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4 traktor">
-              <article class="post-news post-news-wide"><a href="https://yandex.uz/video/preview/17077068833452924979"><img class="img-responsive" src="images/Мини жатка 1.webp" width="700" height="455" alt=""></a>
-                <div class="post-news-body">
-                  <h6><a href="news-post-page.html">Мини жатка</a></h6>
-                  <div class="offset-top-20  traktor1">
-                    <p>мощное и устойчивое к нагрузкам оборудование разработанное с помощью современных технологий из высококачественных материалов. Из-за удобной конструкции эксплуатация и управление не требует лишнего утруждения. Имеет ширину захвата 90см и высоту сквашивания 20мм.</p>
-                  </div>
-                  <!-------------------------------Рабочий------------------------------------>
-                  <div class="post-news-meta offset-top-20">
-                    <span class="fa fa-check"></span>
-                    <span class="align-middle inset-left-10 fst-italic text-black">
-                      Рабочий
-                    </span>
-                  </div>
-                  <!-------------------------------Рабочий------------------------------------>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4 traktor">
-              <article class="post-news post-news-wide"><a href="https://yandex.uz/video/preview/14770571006188067138"><img class="img-responsive" src="images/Мини_уборочный_Комбайн_Для_Сбора_Риса_И_Пшеницы.webp" width="700"  style="height: 300px;" alt=""></a>
-                <div class="post-news-body">
-                  <h6><a href="news-post-page.html">Мини уборочный Комбайн Для Сбора Риса и Пшеницы</a></h6>
-                  <div class="offset-top-20  traktor1">
-                    <p>Небольшая машина для сбора пшеницы-это своего рода Многофункциональный комбайн, который в основном используется для сбора риса и пшеничного зерна, собирая уши риса и wheta и молотить, так что это очень удобно для сельского хозяйства.</p>
-                  </div>
-                  <!-------------------------------Рабочий------------------------------------>
-                  <div class="post-news-meta offset-top-20">
-                    <span class="fa fa-check"></span>
-                    <span class="align-middle inset-left-10 fst-italic text-black">
-                      Рабочий
-                    </span>
-                  </div>
-                  <!-------------------------------Рабочий------------------------------------>
-                </div>
-              </article>
-            </div>
+              {% endfor %}
           </div>
         </div>
       </section>
@@ -187,7 +107,7 @@
         <div class="container section-xs block-after-divider">
           <div class="row row-50 justify-content-xl-between justify-content-sm-center">
             <div class="col-lg-5 col-xl-5">
-              <!--Footer brand--><a class="d-inline-block" href="asosiy.html"><img width='170' height='172' src='images/logo.jpg' alt=''/>
+              <!--Footer brand--><a class="d-inline-block" href="{% url 'home' %}"><img width='170' height='172' src='{% static 'images/logo.jpg' %}' alt=''/>
                <div>
                   <h6 class="barnd-name fw-bold offset-top-25">BoburFarm</h6>
                 </div>
@@ -242,7 +162,7 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
