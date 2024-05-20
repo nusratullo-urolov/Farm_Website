@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html class="wide wow-animation scrollTo" lang="en">
   <head>
     <!-- Site Title-->
@@ -39,7 +40,7 @@
                 <!--Navbar Brand-->
                 <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                     <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
-                      <div class="unit-left"><img width='170' height='172' src='images/image_2024-04-25_01-14-29.png' alt=''/>
+                      <div class="unit-left"><img width='170' height='172' src='{% static 'images/image_2024-04-25_01-14-29.png' %}' alt=''/>
                       </div>
                       <div class="unit-body">
                         <div class="rd-navbar-brand-title">BoburFarm</div>
@@ -57,9 +58,9 @@
                       
                       <li><a href="{% url 'home' %}">Главное</a>
                       </li>
-                      <li><a href="sotrudnik.html">Услуги</a>
+                      <li><a href="{% url 'soturidnik' %}">Услуги</a>
                       </li>
-                      <li><a href="agrofond.html">АгроФонд </a>
+                      <li><a href="{% url 'agrofond' %}">АгроФонд </a>
                       </li>
                     </ul>
                     <!--RD Navbar Mobile Search-->
@@ -79,7 +80,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/image_2024-04-26_08-51-04.png" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/image_2024-04-26_08-51-04.png' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
@@ -95,7 +96,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/image_2024-04-26_09-03-44.png" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/image_2024-04-26_09-03-44.png' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
@@ -111,7 +112,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/image_2024-04-26_09-12-45.png" width="370" style="height: 205px;">
+                        <img class="img-responsive" src="{% static 'images/image_2024-04-26_09-12-45.png' %}" width="370" style="height: 205px;">
                     </a>
                     <div class="post-news-body">
                         <center>

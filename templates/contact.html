@@ -51,7 +51,7 @@
                         <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                             <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
                                 <div class="unit-left"><img width='170' height='172'
-                                                            src='images/image_2024-04-25_01-14-29.png'
+                                                            src='{% static 'images/image_2024-04-25_01-14-29.png' %}'
                                                             alt=''/>
                                 </div>
                                 <div class="unit-body">
@@ -75,9 +75,9 @@
 
                                     <li><a href="{% url 'home' %}">Главное</a>
                                     </li>
-                                    <li><a href="sotrudnik.html">Сотрудники</a>
+                                    <li><a href="{% url 'soturidnik' %}">Сотрудники</a>
                                     </li>
-                                    <li><a href="agrofond.html">АгроФонд </a>
+                                    <li><a href="{% url 'agrofond' %}">АгроФонд </a>
                                     </li>
                                 </ul>
                                 <!--RD Navbar Mobile Search-->
@@ -101,7 +101,7 @@
                         <th width="50px">#</th>
                         <th>Назначение</th>
                         <th>Название</th>
-                        <th>Калечество</th>
+                        <th>Кaлечество</th>
                         <th>Цена</th>
                         <th>Водитель</th>
                         <th>Вес</th>
@@ -239,7 +239,7 @@
                     </tr>
                 </table>
                 {#      <div class="d-flex justify-content-between align-items-center" >#}
-                <input type="submit" class="d-inline-block btn button-primary">Оформлять>
+                <input type="submit" value="Оформлять" class="d-inline-block btn button-primary">
                 {#      </div>#}
             </div>
         </section>

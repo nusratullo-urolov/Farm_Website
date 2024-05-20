@@ -64,10 +64,6 @@ def home(request):
     return render(request, 'asosiy.html')
 
 
-def elon(request):
-    return render(request, 'elon/index.html')
-
-
 def contact(request):
     return render(request, 'contact.html')
 
@@ -75,40 +71,104 @@ def contact(request):
 def add_advert(request):
     if request.method == 'POST':
         data = request.POST
+
         def convert_to_int(value):
             return 1 if value.lower() in ('true', 'on', '1') else 0
 
-        AdCombine.objects.create(c_name=data['c_name'],
-                                 c_quantity=data['c_quantity'],
-                                 c_price=data['c_price'],
-                                 c_driver=convert_to_int(data.get('c_driver', '0')),
-                                 c_quickly=convert_to_int(data.get('c_quickly', '0'))
-                                 )
-        AdTractor.objects.create(t_name=data['t_name'],
-                                 t_quantity=data['t_quantity'],
-                                 t_price=data['t_price'],
-                                 t_driver=convert_to_int(data.get('t_driver', '0')),
-                                 t_quickly=convert_to_int(data.get('t_quickly', '0'))
-                                 )
-        AdMineral.objects.create(m_name=data['m_name'],
-                                 m_price=data['m_price'],
-                                 m_weight=data['m_weight'],
-                                 m_quickly=convert_to_int(data.get('m_quickly', '0'))
-                                 )
-        AdWorker.objects.create(w_name=data['w_name'],
-                                w_quantity=data['w_quantity'],
-                                w_price=data['w_price'],
-                                w_quickly=convert_to_int(data.get('w_quickly', '0'))
-                                )
-        AdEquipment.objects.create(e_name=data['e_name'],
-                                   e_quantity=data['e_quantity'],
-                                   e_price=data['e_price'],
-                                   e_quickly=convert_to_int(data.get('e_quickly', '0'))
-                                   )
+        try:
+            AdCombine.objects.create(
+                c_name=data['c_name'],
+                c_quantity=data['c_quantity'],
+                c_price=data['c_price'],
+                c_driver=convert_to_int(data.get('c_driver', '0')),
+                c_quickly=convert_to_int(data.get('c_quickly', '0'))
+            )
+        except (KeyError, ValueError) as e:
+            print(f"Error creating AdCombine: {e}")
 
-        AdFarm.objects.create(f_name=data['f_name'],
-                              f_quantity=data['f_quantity'],
-                              f_price=data['f_price'],
-                              f_quickly=convert_to_int(data.get('f_quickly', '0'))
-                              )
-        return redirect('/')
+        try:
+            AdTractor.objects.create(
+                t_name=data['t_name'],
+                t_quantity=data['t_quantity'],
+                t_price=data['t_price'],
+                t_driver=convert_to_int(data.get('t_driver', '0')),
+                t_quickly=convert_to_int(data.get('t_quickly', '0'))
+            )
+        except (KeyError, ValueError) as e:
+            print(f"Error creating AdTractor: {e}")
+
+        try:
+            AdMineral.objects.create(
+                m_name=data['m_name'],
+                m_price=data['m_price'],
+                m_weight=data['m_weight'],
+                m_quickly=convert_to_int(data.get('m_quickly', '0'))
+            )
+        except (KeyError, ValueError) as e:
+            print(f"Error creating AdMineral: {e}")
+
+        try:
+            AdWorker.objects.create(
+                w_name=data['w_name'],
+                w_quantity=data['w_quantity'],
+                w_price=data['w_price'],
+                w_quickly=convert_to_int(data.get('w_quickly', '0'))
+            )
+        except (KeyError, ValueError) as e:
+            print(f"Error creating AdWorker: {e}")
+
+        try:
+            AdEquipment.objects.create(
+                e_name=data['e_name'],
+                e_quantity=data['e_quantity'],
+                e_price=data['e_price'],
+                e_quickly=convert_to_int(data.get('e_quickly', '0'))
+            )
+        except (KeyError, ValueError) as e:
+            print(f"Error creating AdEquipment: {e}")
+
+        try:
+            AdFarm.objects.create(
+                f_name=data['f_name'],
+                f_quantity=data['f_quantity'],
+                f_price=data['f_price'],
+                f_quickly=convert_to_int(data.get('f_quickly', '0'))
+            )
+        except (KeyError, ValueError) as e:
+            print(f"Error creating AdFarm: {e}")
+
+        return redirect('information')
+
+
+def ad_combine(request):
+    combines = AdCombine.objects.order_by('-id')
+    return render(request, 'elon/combine.html', context={'combines': combines})
+
+def ad_tractor(request):
+    tractors = AdTractor.objects.order_by('-id')
+    return render(request, 'elon/tractor.html', context={'tractors': tractors})
+
+def ad_mineral(request):
+    minerals = AdMineral.objects.order_by('-id')
+    return render(request, 'elon/mineral.html', context={'minerals': minerals})
+
+def ad_worker(request):
+    workers = AdWorker.objects.order_by('-id')
+    return render(request, 'elon/worker.html', context={'workers': workers})
+
+def ad_equipment(request):
+    equipments = AdEquipment.objects.order_by('-id')
+    return render(request, 'elon/equipment.html', context={'equipments': equipments})
+
+def ad_farm(request):
+    farms = AdFarm.objects.order_by('-id')
+    return render(request, 'elon/farm.html', context={'farms': farms})
+
+def information(request):
+    return render(request, 'elon/information.html')
+
+def soturidnik(request):
+    return render(request, 'sotrudnik.html')
+
+def agrofond(request):
+    return render(request, 'agrofond.html')
