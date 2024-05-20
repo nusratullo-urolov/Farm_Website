@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html class="wide wow-animation scrollTo" lang="en">
   <head>
     <!-- Site Title-->
@@ -39,7 +40,7 @@
                 <!--Navbar Brand-->
                 <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
                     <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
-                      <div class="unit-left"><img width='170' height='172' src='images/image_2024-04-25_01-14-29.png' alt=''/>
+                      <div class="unit-left"><img width='170' height='172' src='{% static 'images/image_2024-04-25_01-14-29.png' %}' alt=''/>
                       </div>
                       <div class="unit-body">
                         <div class="rd-navbar-brand-title">BoburFarm</div>
@@ -79,7 +80,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/ishchilar1.webp" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/ishchilar1.webp' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
@@ -95,7 +96,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/ishchi2.webp" width="370" height="240" alt="">
+                        <img class="img-responsive" src="{% static 'images/ishchi2.webp' %}" width="370" height="240" alt="">
                     </a>
                     <div class="post-news-body">
                         <center>
@@ -111,7 +112,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="post-news">
                     <a href="#">
-                        <img class="img-responsive" src="images/chorvachilik.webp" width="370" style="height: 205px;">
+                        <img class="img-responsive" src="{% static 'images/chorvachilik.webp' %}" width="370" style="height: 205px;">
                     </a>
                     <div class="post-news-body">
                         <center>

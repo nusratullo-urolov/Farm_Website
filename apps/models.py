@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.db.models import CharField, Model, TextField, ImageField, TextChoices, IntegerField, PositiveIntegerField
+from django.db.models import CharField, Model, TextField, ImageField, TextChoices, IntegerField, PositiveIntegerField, \
+    BooleanField
 
 
 class Combine(Model):
@@ -64,3 +65,65 @@ class OtherEquipments(Model):
 
 class User(AbstractUser):
     pass
+
+
+class AdCombine(Model):
+    c_name = CharField(max_length=255)
+    c_quantity = PositiveIntegerField()
+    c_price = PositiveIntegerField()
+    c_driver = BooleanField(default=False)
+    c_quickly = BooleanField(default=False)
+
+    def __str__(self):
+        return self.c_name
+
+
+class AdTractor(Model):
+    t_name = CharField(max_length=255)
+    t_quantity = PositiveIntegerField()
+    t_price = PositiveIntegerField()
+    t_driver = BooleanField(default=False)
+    t_quickly = BooleanField(default=False)
+
+    def __str__(self):
+        return self.t_name
+
+
+class AdMineral(Model):
+    m_name = CharField(max_length=255)
+    m_price = PositiveIntegerField()
+    m_weight = PositiveIntegerField()
+    m_quickly = BooleanField(default=False)
+
+    def __str__(self):
+        return self.m_name
+
+
+class AdWorker(Model):
+    w_name = CharField(max_length=255)
+    w_quantity = PositiveIntegerField()
+    w_price = PositiveIntegerField()
+    w_quickly = BooleanField(default=False)
+
+    def __str__(self):
+        return self.w_name
+
+
+class AdEquipment(Model):
+    e_name = CharField(max_length=255)
+    e_quantity = PositiveIntegerField()
+    e_price = PositiveIntegerField()
+    e_quickly = BooleanField(default=False)
+
+    def __str__(self):
+        return self.e_name
+
+
+class AdFarm(Model):
+    f_name = CharField(max_length=255)
+    f_quantity = PositiveIntegerField()
+    f_price = PositiveIntegerField()
+    f_quickly = BooleanField(default=False)
+
+    def __str__(self):
+        return self.f_name

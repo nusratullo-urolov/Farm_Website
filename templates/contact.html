@@ -1,297 +1,327 @@
 <!DOCTYPE html>
+{% load static %}
 <html class="wide wow-animation scrollTo" lang="en">
 
 <head>
-  <!-- Site Title-->
-  <title>Home 1</title>
-  <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport"
-    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="keywords" content="intense web design multipurpose template">
-  <meta name="date" content="Dec 26">
-  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-  <!-- Stylesheets-->
-  <link rel="stylesheet" type="text/css"
-    href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
-  <link rel="stylesheet" href="{% static '{% static 'css/bootstrap.css' %}' %}">
-  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Site Title-->
+    <title>Home 1</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="intense web design multipurpose template">
+    <meta name="date" content="Dec 26">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
-  <div class="preloader">
+<div class="preloader">
     <div class="preloader-body">
-      <div class="cssload-container">
-        <div class="cssload-speeding-wheel"></div>
-      </div>
-      <p>Loading...</p>
+        <div class="cssload-container">
+            <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
     </div>
-  </div>
-  <!-- Page-->
-  <div class="page text-center">
+</div>
+<!-- Page-->
+<div class="page text-center">
     <!-- Page Header-->
     <header class="page-head header-panel-absolute">
-      <!-- RD Navbar Transparent-->
-      <div class="rd-navbar-wrap">
-        <nav class="rd-navbar rd-navbar-default" data-auto-height="false" data-lg-auto-height="true"
-          data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
-          data-lg-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
-          data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static"
-          data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static"
-          data-lg-stick-up-offset="210px" data-xl-stick-up-offset="85px" data-xxl-stick-up-offset="85px"
-          data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-          <div class="rd-navbar-inner">
-            <!-- RD Navbar Panel-->
+        <!-- RD Navbar Transparent-->
+        <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-default" data-auto-height="false" data-lg-auto-height="true"
+                 data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+                 data-lg-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+                 data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static"
+                 data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static"
+                 data-lg-stick-up-offset="210px" data-xl-stick-up-offset="85px" data-xxl-stick-up-offset="85px"
+                 data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel-->
 
-            <div class="rd-navbar-menu-wrap clearfix">
-              <!--Navbar Brand-->
-              <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
-                  <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
-                    <div class="unit-left"><img width='170' height='172' src='images/image_2024-04-25_01-14-29.png'
-                        alt='' />
-                    </div>
-                    <div class="unit-body">
-                      <div class="rd-navbar-brand-title">BoburFarm</div>
-                      <div class="rd-navbar-brand-slogan">Фермерское хозяйство</div>
-                    </div>
-                  </div>
-                </a></div>
-              <div class="rd-navbar-nav-wrap">
-                <div class="rd-navbar-mobile-scroll">
-                  <div class="rd-navbar-mobile-header-wrap">
-                    <!--Navbar Brand Mobile-->
-                    <div class="rd-navbar-mobile-brand"><a href="{% url 'home' %}"><img width='136' height='138'
-                          src='{% static 'images/logo-170x172.png' %}' alt='' /></a></div>
-                  </div>
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
+                    <div class="rd-navbar-menu-wrap clearfix">
+                        <!--Navbar Brand-->
+                        <div class="rd-navbar-brand"><a class="d-inline-block" href="{% url 'home' %}">
+                            <div class="unit align-items-sm-center unit-xl unit-spacing-custom">
+                                <div class="unit-left"><img width='170' height='172'
+                                                            src='images/image_2024-04-25_01-14-29.png'
+                                                            alt=''/>
+                                </div>
+                                <div class="unit-body">
+                                    <div class="rd-navbar-brand-title">BoburFarm</div>
+                                    <div class="rd-navbar-brand-slogan">Фермерское хозяйство</div>
+                                </div>
+                            </div>
+                        </a></div>
+                        <div class="rd-navbar-nav-wrap">
+                            <div class="rd-navbar-mobile-scroll">
+                                <div class="rd-navbar-mobile-header-wrap">
+                                    <!--Navbar Brand Mobile-->
+                                    <div class="rd-navbar-mobile-brand"><a href="{% url 'home' %}"><img width='136'
+                                                                                                        height='138'
+                                                                                                        src='{% static 'images/logo-170x172.png' %}'
+                                                                                                        alt=''/></a>
+                                    </div>
+                                </div>
+                                <!-- RD Navbar Nav-->
+                                <ul class="rd-navbar-nav">
 
-                    <li><a href="{% url 'home' %}">Главное</a>
-                    </li>
-                    <li><a href="sotrudnik.html">Сотрудники</a>
-                    </li>
-                    <li><a href="agrofond.html">АгроФонд </a>
-                    </li>
-                  </ul>
-                  <!--RD Navbar Mobile Search-->
+                                    <li><a href="{% url 'home' %}">Главное</a>
+                                    </li>
+                                    <li><a href="sotrudnik.html">Сотрудники</a>
+                                    </li>
+                                    <li><a href="agrofond.html">АгроФонд </a>
+                                    </li>
+                                </ul>
+                                <!--RD Navbar Mobile Search-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
+            </nav>
+        </div>
     </header>
     <!-- Latest news-->
-    <section class="section bg-catskill section-xl">
-      <div class="container">
-        <h2 class="fw-bold">Оформлять заявку</h2>
-        <hr class="divider bg-madison">
-        <table class="table table-custom table-primary table-fixed text-center offset-top-30" data-responsive="true">
-          <tr>
-              <th width="50px">#</th>
-              <th>Назначение</th>
-              <th>Название</th>
-              <th>Калечество</th>
-              <th>Водитель</th>
-              <th>Вес</th>
-              <th>Срочно</th>
+    <form action="{% url 'add_advert' %}" method="post">
+        {% csrf_token %}
+        <section class="section bg-catskill section-xl">
+            <div class="container">
+                <h2 class="fw-bold">Оформлять заявку</h2>
+                <hr class="divider bg-madison">
+                <table class="table table-custom table-primary table-fixed text-center offset-top-30"
+                       data-responsive="true">
+                    <tr>
+                        <th width="50px">#</th>
+                        <th>Назначение</th>
+                        <th>Название</th>
+                        <th>Калечество</th>
+                        <th>Цена</th>
+                        <th>Водитель</th>
+                        <th>Вес</th>
+                        <th>Срочно</th>
 
-          </tr>
-          <tr>
-              <td>1</td>
-              <td>Комбайн</td>
-              <td>
-                <select name="" id="">
-                  <option value="">WORLD 4YZ combine</option>
-                  <option value="">Енисей</option>
-                  <option value="">Комбайн kubota mini</option>
-                  <option value="">Мини жатка</option>
-                  <option value="">Мини уборочный Комбайн</option>
-                </select>
-              </td>
-              <td><input class="form-input" type="number"></td>
-              <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-              <td style="font-size: 30px;">-</td>
-              <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Трактор</td>
-            <td>
-              <select name="" id="">
-                <option value="">трактора мтз 80</option>
-                <option value="">Бульдозера Komatsu D65P-12 болотоход</option>
-                <option value="">Тракторов XCMG</option>
-                <option value="">Тракторы Мтз 82</option>
-                <option value="">Американские трактор</option>
-              </select>
-            </td>
-            <td><input class="form-input" type="number"></td>
-            <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-            <td style="font-size: 30px;">-</td>
-            <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
+                    </tr>
 
-          </tr>
-          <tr>
-              <td>3</td>
-              <td>Удобрение</td>
-              <td>
-                <select name="" id="">
-                  <option value="">Карбамид</option>
-                  <option value="">ПРК БЕЛЫЙ ЖЕМЧУГ</option>
-                  <option value="">Сульфоаммофос</option>
-                  <option value="">Суперфосфат</option>
-                  <option value="">Торф удобрение</option>
-                  <option value="">Aммиачная селитра</option>
-                  <option value="">Борофоска</option>
-                  <option value="">Универсальное с диатомитом ГЕРА</option>
-                  <option value="">Для кабачков в открытом грунте</option>
-                </select>
-              </td>
-              <td style="font-size: 30px;">-</td>
-              <td style="font-size: 30px;">-</td>
-              <td><input class="form-input" type="number"></td>
-              <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Работники</td>
-            <td>
-              <select name="" id="">
-                <option value="">Грузчики</option>
-                <option value="">Водитель</option>
-                <option value="">Череорабочие</option>
-              </select>
-            </td>
-            <td><input class="form-input" type="number"></td>
-            <td style="font-size: 30px;">-</td>
-            <td style="font-size: 30px;">-</td>
-            <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-          </tr>
-          <tr>
-              <td>5</td>
-              <td>Доп обародувания</td>
-              <td>
-                <select name="" id="">
-                  <option value="">Прицеп</option>
-                  <option value="">Плуг</option>
-                  <option value="">Почаофреза</option>
-                  <option value="">Лазерние уровнии</option>
-                  <option value="">Культуатор</option>
-                  <option value="">Сеялка</option>
-                  <option value="">Пресс-подьоршик</option>
-                  <option value="">Захват для удобрении</option>
-                  <option value="">Отвал смены</option>
-                  
-                </select>
-              </td>
-              <td><input class="form-input" type="number"></td>
-              <td style="font-size: 30px;">-</td>
-              <td style="font-size: 30px;">-</td>
-              <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Для Фермы</td>
-            <td>
-              <select name="" id="">
-                <option value="">Корм</option>
-                <option value="">Сушенная трава</option>
-                <option value="">Почаофреза</option>
-                <option value="">Лазерние уровнии</option>
-                <option value="">Культуатор</option>
-                <option value="">Сеялка</option>
-                <option value="">Пресс-подьоршик</option>
-                <option value="">Захват для удобрении</option>
-                <option value="">Отвал смены</option>
-                
-              </select>
-            </td>
-            <td><input class="form-input" type="number"></td>
-            <td style="font-size: 30px;">-</td>
-            <td style="font-size: 30px;">-</td>
-            <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
-        </tr>
-      </table>
-      <div class="d-flex justify-content-between align-items-center" >
-        <div class="d-inline-block" style="font-size: 20px;">Цена: 0$</div>
-        <div class="d-inline-block btn button-primary">Оформлять</div>
-      </div>
-      </div>
-    </section>
-  </div>
-  <footer class="page-footer">
+                    <tr>
+                        <td>1</td>
+                        <td>Комбайн</td>
+                        <td>
+                            <select name="c_name">
+                                <option value="WORLD 4YZ combine">WORLD 4YZ combine</option>
+                                <option value="Енисей">Енисей</option>
+                                <option value="Комбайн kubota mini">Комбайн kubota mini</option>
+                                <option value="Мини жатка">Мини жатка</option>
+                                <option value="Мини уборочный Комбайн">Мини уборочный Комбайн</option>
+                            </select>
+                        </td>
+                        <td><input name="c_quantity" class="form-input" type="number"></td>
+                        <td><input name="c_price" class="form-input" type="number"></td>
+                        <td><input name="c_driver" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
+                        <td style="font-size: 30px;">-</td>
+                        <td><input name="c_quickly" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Трактор</td>
+                        <td>
+                            <select name="t_name">
+                                <option value="трактора мтз 80">трактора мтз 80</option>
+                                <option value="Бульдозера Komatsu D65P-12 болотоход">Бульдозера Komatsu D65P-12 болотоход</option>
+                                <option value="Тракторов XCMG">Тракторов XCMG</option>
+                                <option value="Тракторы Мтз 82">Тракторы Мтз 82</option>
+                                <option value="Американские трактор">Американские трактор</option>
+                            </select>
+                        </td>
+                        <td><input name="t_quantity" class="form-input" type="number"></td>
+                        <td><input name="t_price" class="form-input" type="number"></td>
+
+                        <td><input name="t_driver" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
+                        <td style="font-size: 30px;">-</td>
+                        <td><input name="t_quickly" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Удобрение</td>
+                        <td>
+                            <select name="m_name">
+                                <option value="Карбамид">Карбамид</option>
+                                <option value="ПРК БЕЛЫЙ ЖЕМЧУГ">ПРК БЕЛЫЙ ЖЕМЧУГ</option>
+                                <option value="Сульфоаммофос">Сульфоаммофос</option>
+                                <option value="Суперфосфат">Суперфосфат</option>
+                                <option value="Торф удобрение">Торф удобрение</option>
+                                <option value="Aммиачная селитра">Aммиачная селитра</option>
+                                <option value="Борофоска">Борофоска</option>
+                                <option value="Универсальное с диатомитом ГЕРА">Универсальное с диатомитом ГЕРА</option>
+                                <option value="Для кабачков в открытом грунте">Для кабачков в открытом грунте</option>
+                            </select>
+                        </td>
+                        <td style="font-size: 30px;">-</td>
+                        <td><input name="m_price" class="form-input" type="number"></td>
+
+                        <td style="font-size: 30px;">-</td>
+
+                        <td><input name="m_weight" class="form-input" type="number"></td>
+
+                        <td><input name="m_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Работники</td>
+                        <td>
+                            <select name="w_name">
+                                <option value="Грузчики">Грузчики</option>
+                                <option value="Водитель">Водитель</option>
+                                <option value="Череорабочие">Череорабочие</option>
+                            </select>
+                        </td>
+                        <td><input name="w_quantity" class="form-input" type="number"></td>
+                        <td><input name="w_price" class="form-input" type="number"></td>
+
+                        <td style="font-size: 30px;">-</td>
+                        <td style="font-size: 30px;">-</td>
+                        <td><input name="w_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Доп обародувания</td>
+                        <td>
+                            <select name="e_name">
+                                <option value="Прицеп">Прицеп</option>
+                                <option value="Плуг">Плуг</option>
+                                <option value="Почаофреза">Почаофреза</option>
+                                <option value="Лазерние уровнии">Лазерние уровнии</option>
+                                <option value="Культуатор">Культуатор</option>
+                                <option value="Сеялка">Сеялка</option>
+                                <option value="Пресс-подьоршик">Пресс-подьоршик</option>
+                                <option value="Захват для удобрении">Захват для удобрении</option>
+                                <option value="Отвал смены">Отвал смены</option>
+
+                            </select>
+                        </td>
+                        <td><input name="e_quantity" class="form-input" type="number"></td>
+                        <td><input name="e_price" class="form-input" type="number"></td>
+
+                        <td style="font-size: 30px;">-</td>
+                        <td style="font-size: 30px;">-</td>
+                        <td><input name="e_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Для Фермы</td>
+                        <td>
+                            <select name="f_name">
+                                <option value="Корм">Корм</option>
+                                <option value="Сушенная трава">Сушенная трава</option>
+                                <option value="Почаофреза">Почаофреза</option>
+                                <option value="Лазерние уровнии">Лазерние уровнии</option>
+                                <option value="Культуатор">Культуатор</option>
+                                <option value="Сеялка">Сеялка</option>
+                                <option value="Пресс-подьоршик">Пресс-подьоршик</option>
+                                <option value="Захват для удобрении">Захват для удобрении</option>
+                                <option value="Отвал смены">Отвал смены</option>
+
+                            </select>
+                        </td>
+                        <td><input name="f_quantity" class="form-input" type="number"></td>
+                        <td><input name="f_price" class="form-input" type="number"></td>
+
+                        <td style="font-size: 30px;">-</td>
+                        <td style="font-size: 30px;">-</td>
+                        <td><input name="f_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                    </tr>
+                </table>
+                {#      <div class="d-flex justify-content-between align-items-center" >#}
+                <input type="submit" class="d-inline-block btn button-primary">Оформлять>
+                {#      </div>#}
+            </div>
+        </section>
+    </form>
+</div>
+<footer class="page-footer">
     <div class="hr bg-gray-light"></div>
     <div class="container section-xs block-after-divider">
-      <div class="row row-50 justify-content-xl-between justify-content-sm-center">
-        <div class="col-lg-5 col-xl-5">
-          <!--Footer brand--><a class="d-inline-block" href="{% url 'home' %}"><img width='170' height='172'
-              src='{% static 'images/logo.jpg' %}' alt='' />
-            <div>
-              <h6 class="barnd-name fw-bold offset-top-25">BoburFarm</h6>
+        <div class="row row-50 justify-content-xl-between justify-content-sm-center">
+            <div class="col-lg-5 col-xl-5">
+                <!--Footer brand--><a class="d-inline-block" href="{% url 'home' %}"><img width='170' height='172'
+                                                                                          src='{% static 'images/logo.jpg' %}'
+                                                                                          alt=''/>
+                <div>
+                    <h6 class="barnd-name fw-bold offset-top-25">BoburFarm</h6>
+                </div>
+                <div>
+                    <p class="brand-slogan text-gray fst-italic font-accent">фермерское хозяйства</p>
+                </div>
+            </a>
             </div>
-            <div>
-              <p class="brand-slogan text-gray fst-italic font-accent">фермерское хозяйства</p>
+            <div class="col-sm-10 col-lg-7 col-xl-7 text-xl-start">
+                <h6 class="fw-bold">Contact us</h6>
+                <div class="text-subline"></div>
+                <div class="offset-top-30">
+                    <ul class="list-unstyled contact-info list">
+                        <li>
+                            <div class="unit flex-row align-items-center unit-spacing-xs">
+                                <div class="unit-left"><span
+                                        class="icon mdi mdi-phone align-middle icon-xs text-madison"></span>
+                                </div>
+                                <div class="unit-body"><a class="text-dark" href="tel:#">+998 90-433-87-27,</a> <a
+                                        class="d-block d-lg-inline-block text-dark" href="tel:#">+998 33-433-87-27</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="offset-top-15">
+                            <div class="unit flex-row align-items-center unit-spacing-xs">
+                                <div class="unit-left"><span
+                                        class="icon mdi mdi-map-marker align-middle icon-xs text-madison"></span>
+                                </div>
+                                <div class="unit-body text-start"><a class="text-dark" href="#">2130 Шаватской пасёлок
+                                    Бойрачи, CA
+                                    94117-1080 UZB</a></div>
+                            </div>
+                        </li>
+                        <li class="offset-top-15">
+                            <div class="unit flex-row align-items-center unit-spacing-xs">
+                                <div class="unit-left"><span
+                                        class="icon mdi mdi-email-open align-middle icon-xs text-madison"></span>
+                                </div>
+                                <div class="unit-body"><a href="mailto:#">Boburjonboboxanov8281@gmail.com</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offset-top-15 text-start">
+                    <ul class="list-inline list-inline-xs list-inline-madison">
+                        <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled" href="#"></a>
+                        </li>
+                        <li><a class="icon icon-xxs fa fa-twitter icon-circle icon-gray-light-filled" href="#"></a></li>
+                        <li><a class="icon icon-xxs fa fa-google icon-circle icon-gray-light-filled" href="#"></a></li>
+                        <li><a class="icon icon-xxs fa fa-instagram icon-circle icon-gray-light-filled" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </a>
         </div>
-        <div class="col-sm-10 col-lg-7 col-xl-7 text-xl-start">
-          <h6 class="fw-bold">Contact us</h6>
-          <div class="text-subline"></div>
-          <div class="offset-top-30">
-            <ul class="list-unstyled contact-info list">
-              <li>
-                <div class="unit flex-row align-items-center unit-spacing-xs">
-                  <div class="unit-left"><span class="icon mdi mdi-phone align-middle icon-xs text-madison"></span>
-                  </div>
-                  <div class="unit-body"><a class="text-dark" href="tel:#">+998 90-433-87-27,</a> <a
-                      class="d-block d-lg-inline-block text-dark" href="tel:#">+998 33-433-87-27</a>
-                  </div>
-                </div>
-              </li>
-              <li class="offset-top-15">
-                <div class="unit flex-row align-items-center unit-spacing-xs">
-                  <div class="unit-left"><span class="icon mdi mdi-map-marker align-middle icon-xs text-madison"></span>
-                  </div>
-                  <div class="unit-body text-start"><a class="text-dark" href="#">2130 Шаватской пасёлок Бойрачи, CA
-                      94117-1080 UZB</a></div>
-                </div>
-              </li>
-              <li class="offset-top-15">
-                <div class="unit flex-row align-items-center unit-spacing-xs">
-                  <div class="unit-left"><span class="icon mdi mdi-email-open align-middle icon-xs text-madison"></span>
-                  </div>
-                  <div class="unit-body"><a href="mailto:#">Boburjonboboxanov8281@gmail.com</a></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="offset-top-15 text-start">
-            <ul class="list-inline list-inline-xs list-inline-madison">
-              <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled" href="#"></a></li>
-              <li><a class="icon icon-xxs fa fa-twitter icon-circle icon-gray-light-filled" href="#"></a></li>
-              <li><a class="icon icon-xxs fa fa-google icon-circle icon-gray-light-filled" href="#"></a></li>
-              <li><a class="icon icon-xxs fa fa-instagram icon-circle icon-gray-light-filled" href="#"></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="bg-madison context-dark">
-      <div class="container text-lg-start section-5">
-        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>All
+        <div class="container text-lg-start section-5">
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>All
             Rights Reserved</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
-      </div>
+        </div>
     </div>
-  </footer>
-  <!-- Global Mailform Output-->
-  <div class="snackbars" id="form-output-global"></div>
-  <!-- Java script-->
-  
-  <script src="{% static 'js/core.min.js' %}"></script>
-  <script src="{% static 'js/script.js' %}"></script>
+</footer>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- Java script-->
+
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 
 </body>
 
