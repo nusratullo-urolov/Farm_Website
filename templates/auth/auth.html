@@ -55,11 +55,11 @@
                                 <div class="tab-content">
                                     <div class="tab-pane fade" id="tabs-login-1">
                                         <!-- RD Mailform-->
-                                        <form class="rd-mailform text-start" data-form-output="form-output-global"
-                                            data-form-type="contact" method="post" action="{% url 'login' %}">
+                                        <form method="post" action="{% url 'login' %}">
+                                            {% csrf_token %}
                                             <div class="form-wrap">
                                                 <label class="form-label form-label-outside"
-                                                    for="form-login-username">Username or e-mail:</label>
+                                                    for="form-login-username">Username:</label>
                                                 <input class="form-input bg-default" id="form-login-username"
                                                     type="text" name="username" data-constraints="@Required">
                                             </div>
@@ -67,13 +67,13 @@
                                                 <label class="form-label form-label-outside"
                                                     for="form-login-password">Password:</label>
                                                 <input class="form-input bg-default" id="form-login-password"
-                                                    type="password" name="pass" data-constraints="@Required">
+                                                    type="password" name="password" data-constraints="@Required">
                                             </div>
-                                            <div class="offset-top-20">
-                                                <a href="./{% url 'home' %}">
+
                                                     <button class="btn button-primary d-block d-xl-inline-block"
                                                     type="submit">Sign in</button>
-                                                </a>
+                                        </form>
+
                                                 <span
                                                     class="inset-xl-left-20 align-middle small d-inline-block offset-top-20 offset-lg-top-0">or
                                                     enter with</span>
@@ -86,8 +86,8 @@
                                                     <li><a class="icon icon-xxs fa fa-google icon-circle icon-gray-light-filled"
                                                             href="#"></a></li>
                                                 </ul>
-                                            </div>
-                                        </form>
+
+
                                     </div>
                                     <div class="tab-pane fade" id="tabs-login-2">
                                         <form method="post" action="{% url 'register' %}">
@@ -97,6 +97,12 @@
                                                     for="form-register-username">Name:</label>
                                                 <input class="form-input bg-default" id="form-register-username"
                                                     type="text" name="name" data-constraints="@Required">
+                                            </div>
+                                            <div class="form-wrap">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-register-username">Username:</label>
+                                                <input class="form-input bg-default" id="form-register-username"
+                                                    type="text" name="username" data-constraints="@Required">
                                             </div>
                                             <div class="form-wrap offset-top-15">
                                                 <label class="form-label form-label-outside"

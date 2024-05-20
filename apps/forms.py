@@ -12,7 +12,7 @@ class RegisterForm(ModelForm):
 
     class Meta:
         model = User
-        fields = ('first_name', 'email', 'password')
+        fields = ('first_name', 'username', 'email', 'password')
 
     def clean_password(self):
         password = self.data.get('password')

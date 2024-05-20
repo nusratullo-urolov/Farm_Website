@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger
 from django.shortcuts import render, redirect
+from django.urls import reverse
 
 from apps.forms import RegisterForm, LoginForm
 from apps.models import User, Combine, Tractor, Workers, OtherEquipments, MineralEndorsements, AdCombine, AdTractor, \
@@ -26,12 +27,14 @@ def login_1(request):
     if request.method == 'POST':
         forms = LoginForm(request.POST)
         if forms.is_valid():
-            username = forms.data.get('email')
+            username = forms.data.get('username')
             password = forms.data.get('password')
             users = authenticate(username=username, password=password)
             if users:
                 login(request, users)
                 return redirect('home')
+            # else:
+            #     return redirect(reverse('login'))
     return render(request, 'auth/auth.html')
 
 
