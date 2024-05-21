@@ -3,7 +3,7 @@
 <html class="wide wow-animation scrollTo" lang="en">
   <head>
     <!-- Site Title-->
-    <title>Home 1</title>
+    <title>Комбайны</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -58,9 +58,9 @@
                       
                       <li><a href="{% url 'home' %}">Главное</a>
                       </li>
-                      <li><a href="sotrudnik.html">Сотрудники</a>
+                      <li><a href="'{% url 'soturidnik' %}'">Услуги</a>
                       </li>
-                      <li><a href="agrofond.html">АгроФонд </a>
+                      <li><a href="'{% url 'agrofond' %}'">АгроФонд </a>
                       </li>
                     </ul>
                     <!--RD Navbar Mobile Search-->
@@ -82,7 +82,7 @@
             <div class="col-md-6 col-lg-4 traktor">
               <article class="post-news post-news-wide"><a href="https://yandex.uz/video/preview/12081852545497469529"><img class="img-responsive" src="{{ combine.image.url }}" width="700" height="455" alt=""></a>
                 <div class="post-news-body">
-                  <h6><a href="news-post-page.html">{{ combine.name }}</a></h6>
+                  <h6><a href="{{ combine.url }}">{{ combine.name }}</a></h6>
                   <div class="offset-top-20  traktor1">
                     <p>{{ combine.description }}</p>
                   </div>

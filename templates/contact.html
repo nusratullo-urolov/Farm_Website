@@ -4,7 +4,7 @@
 
 <head>
     <!-- Site Title-->
-    <title>Home 1</title>
+    <title>Контакт</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
@@ -75,7 +75,7 @@
 
                                     <li><a href="{% url 'home' %}">Главное</a>
                                     </li>
-                                    <li><a href="{% url 'soturidnik' %}">Сотрудники</a>
+                                    <li><a href="{% url 'soturidnik' %}">Услуги</a>
                                     </li>
                                     <li><a href="{% url 'agrofond' %}">АгроФонд </a>
                                     </li>
@@ -106,6 +106,8 @@
                         <th>Водитель</th>
                         <th>Вес</th>
                         <th>Срочно</th>
+                        <th>C</th>
+                        <th>Дo</th>
 
                     </tr>
 
@@ -126,6 +128,8 @@
                         <td><input name="c_driver" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
                         <td style="font-size: 30px;">-</td>
                         <td><input name="c_quickly" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
+                        <td><input name="c_fromdate" class="form-input" type="date"></td>
+                        <td><input name="c_todate" class="form-input" type="date"></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -145,6 +149,8 @@
                         <td><input name="t_driver" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
                         <td style="font-size: 30px;">-</td>
                         <td><input name="t_quickly" type="checkbox" value="1" style="width: 20px; height: 20px;"></td>
+                        <td><input name="t_fromdate" class="form-input" type="date"></td>
+                        <td><input name="t_todate" class="form-input" type="date"></td>
 
                     </tr>
                     <tr>
@@ -171,6 +177,8 @@
                         <td><input name="m_weight" class="form-input" type="number"></td>
 
                         <td><input name="m_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                        <td><input name="m_fromdate" class="form-input" type="date"></td>
+                        <td><input name="m_todate" class="form-input" type="date"></td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -188,6 +196,8 @@
                         <td style="font-size: 30px;">-</td>
                         <td style="font-size: 30px;">-</td>
                         <td><input name="w_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                        <td><input name="w_fromdate" class="form-input" type="date"></td>
+                        <td><input name="w_todate" class="form-input" type="date"></td>
                     </tr>
                     <tr>
                         <td>5</td>
@@ -212,6 +222,8 @@
                         <td style="font-size: 30px;">-</td>
                         <td style="font-size: 30px;">-</td>
                         <td><input name="e_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                        <td><input name="e_fromdate" class="form-input" type="date"></td>
+                        <td><input name="e_todate" class="form-input" type="date"></td>
                     </tr>
                     <tr>
                         <td>6</td>
@@ -236,6 +248,8 @@
                         <td style="font-size: 30px;">-</td>
                         <td style="font-size: 30px;">-</td>
                         <td><input name="f_quickly" type="checkbox" style="width: 20px; height: 20px;"></td>
+                        <td><input name="f_fromdate" class="form-input" type="date"></td>
+                        <td><input name="f_todate" class="form-input" type="date"></td>
                     </tr>
                 </table>
                 {#      <div class="d-flex justify-content-between align-items-center" >#}

@@ -86,7 +86,9 @@ def add_advert(request):
                 c_quantity=data['c_quantity'],
                 c_price=data['c_price'],
                 c_driver=convert_to_int(data.get('c_driver', '0')),
-                c_quickly=convert_to_int(data.get('c_quickly', '0'))
+                c_quickly=convert_to_int(data.get('c_quickly', '0')),
+                from_date=data['c_fromdate'],
+                to_date=data['c_todate'],
             )
         except (KeyError, ValueError) as e:
             print(f"Error creating AdCombine: {e}")
@@ -97,7 +99,9 @@ def add_advert(request):
                 t_quantity=data['t_quantity'],
                 t_price=data['t_price'],
                 t_driver=convert_to_int(data.get('t_driver', '0')),
-                t_quickly=convert_to_int(data.get('t_quickly', '0'))
+                t_quickly=convert_to_int(data.get('t_quickly', '0')),
+                from_date=data['t_fromdate'],
+                to_date=data['t_todate'],
             )
         except (KeyError, ValueError) as e:
             print(f"Error creating AdTractor: {e}")
@@ -107,7 +111,9 @@ def add_advert(request):
                 m_name=data['m_name'],
                 m_price=data['m_price'],
                 m_weight=data['m_weight'],
-                m_quickly=convert_to_int(data.get('m_quickly', '0'))
+                m_quickly=convert_to_int(data.get('m_quickly', '0')),
+                from_date=data['m_fromdate'],
+                to_date=data['m_todate'],
             )
         except (KeyError, ValueError) as e:
             print(f"Error creating AdMineral: {e}")
@@ -117,7 +123,9 @@ def add_advert(request):
                 w_name=data['w_name'],
                 w_quantity=data['w_quantity'],
                 w_price=data['w_price'],
-                w_quickly=convert_to_int(data.get('w_quickly', '0'))
+                w_quickly=convert_to_int(data.get('w_quickly', '0')),
+                from_date=data['w_fromdate'],
+                to_date=data['w_todate'],
             )
         except (KeyError, ValueError) as e:
             print(f"Error creating AdWorker: {e}")
@@ -127,7 +135,9 @@ def add_advert(request):
                 e_name=data['e_name'],
                 e_quantity=data['e_quantity'],
                 e_price=data['e_price'],
-                e_quickly=convert_to_int(data.get('e_quickly', '0'))
+                e_quickly=convert_to_int(data.get('e_quickly', '0')),
+                from_date=data['e_fromdate'],
+                to_date=data['e_todate'],
             )
         except (KeyError, ValueError) as e:
             print(f"Error creating AdEquipment: {e}")
@@ -137,7 +147,9 @@ def add_advert(request):
                 f_name=data['f_name'],
                 f_quantity=data['f_quantity'],
                 f_price=data['f_price'],
-                f_quickly=convert_to_int(data.get('f_quickly', '0'))
+                f_quickly=convert_to_int(data.get('f_quickly', '0')),
+                from_date=data['f_fromdate'],
+                to_date=data['f_todate']
             )
         except (KeyError, ValueError) as e:
             print(f"Error creating AdFarm: {e}")

@@ -4,7 +4,7 @@
 
 <head>
   <!-- Site Title-->
-  <title>Home 1</title>
+  <title>Тракторы</title>
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport"
@@ -70,9 +70,9 @@
 
                     <li><a href="{% url 'home' %}">Главное</a>
                     </li>
-                    <li><a href="sotrudnik.html">Сотрудники</a>
+                    <li><a href="'{% url 'soturidnik' %}'">Услуги</a>
                     </li>
-                    <li><a href="agrofond.html">АгроФонд </a>
+                    <li><a href="'{% url 'agrofond' %}'">АгроФонд </a>
                     </li>
                   </ul>
                   <!--RD Navbar Mobile Search-->
@@ -95,7 +95,7 @@
             <article class="post-news post-news-wide"><a href="https://youtu.be/GhzETvIj3Zw?si=8MQ_MLmcirGVmvT8"><img class="img-responsive"
                   src="{{ tracto.image.url }}" width="700" height="455" alt=""></a>
               <div class="post-news-body">
-                <h6><a href="https://youtu.be/GhzETvIj3Zw?si=8MQ_MLmcirGVmvT8">{{ tracto.name }}</a></h6>
+                <h6><a href="{{ tracto.url }}">{{ tracto.name }}</a></h6>
                 <div class="offset-top-20 traktor1" >
                   <p>{{ tracto.description }}</p>
                 </div>

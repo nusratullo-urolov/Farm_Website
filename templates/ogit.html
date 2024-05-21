@@ -4,7 +4,7 @@
 
 <head>
     <!-- Site Title-->
-    <title>Home 1</title>
+    <title>Минеральные удобрение</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
@@ -72,9 +72,9 @@
 
                                         <li><a href="{% url 'home' %}">Главное</a>
                                         </li>
-                                        <li><a href="sotrudnik.html">Сотрудники</a>
+                                        <li><a href="'{% url 'soturidnik' %}'">Услуги</a>
                                         </li>
-                                        <li><a href="agrofond.html">АгроФонд </a>
+                                        <li><a href="'{% url 'agrofond' %}'">АгроФонд </a>
                                         </li>
                                     </ul>
                                     <!--RD Navbar Mobile Search-->
@@ -99,7 +99,7 @@
                                 <img class="img-responsive" src="{{ mineral.image.url }}" width="700" height="455"
                                     alt=""></a>
                             <div class="post-news-body">
-                                <h6><a href="news-post-page.html">{{ mineral.name }}</a></h6>
+                                <h6><a href="{{ mineral.url }}">{{ mineral.name }}</a></h6>
                                 <div class="offset-top-20  traktor1">
                                     <p>{{ mineral.description }}</p>
                                 </div>
