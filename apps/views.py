@@ -193,3 +193,6 @@ def agrofond(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+def yer(request):
+    return render(request, 'yer.html')

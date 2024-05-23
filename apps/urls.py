@@ -2,7 +2,7 @@ from django.urls import path
 
 from apps.views import register, login_1, combine, tractor, mineral_endorsement, worker, other_equipment, home, \
     contact, add_advert, ad_combine, ad_tractor, ad_mineral, ad_equipment, ad_worker, ad_farm, information, soturidnik, \
-    agrofond, logout_view
+    agrofond, logout_view, yer
 
 urlpatterns = [
     path('', home, name='home'),
@@ -24,5 +24,6 @@ urlpatterns = [
     path('add-advert/', add_advert, name='add_advert'),
     path('information/', information, name='information'),
     path('soturidnik/', soturidnik, name='soturidnik'),
-    path('agro-fond/', agrofond, name='agrofond')
+    path('agro-fond/', agrofond, name='agrofond'),
+    path('yer/', yer, name='yer')
 ]
