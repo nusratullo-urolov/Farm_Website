@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger
 from django.shortcuts import render, redirect
@@ -189,3 +189,7 @@ def soturidnik(request):
 
 def agrofond(request):
     return render(request, 'agrofond.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
