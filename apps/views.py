@@ -7,7 +7,7 @@ from django.urls import reverse
 from apps.forms import RegisterForm, LoginForm
 from apps.models import User, Combine, Tractor, Workers, OtherEquipments, MineralEndorsements, AdCombine, AdTractor, \
     AdMineral, AdWorker, AdEquipment, AdFarm
-
+from django.contrib import messages
 
 # Create your views here.
 
@@ -33,8 +33,12 @@ def login_1(request):
             if users:
                 login(request, users)
                 return redirect('home')
-            # else:
-            #     return redirect(reverse('login'))
+            else:
+                messages.add_message(request,
+                                     level=messages.ERROR,
+                                     message='email or password wrong'
+                                     )
+                return render(request, 'auth/auth.html')
     return render(request, 'auth/auth.html')
 
 
