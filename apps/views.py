@@ -68,7 +68,7 @@ def other_equipment(request):
     return render(request, 'uskuna.html', context={'equipments': equipments})
 
 
-@login_required(login_url='/login')
+
 def home(request):
     return render(request, 'asosiy.html')
 
@@ -76,7 +76,7 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
-
+@login_required(login_url='/login')
 def add_advert(request):
     if request.method == 'POST':
         data = request.POST
